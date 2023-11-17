@@ -7,7 +7,7 @@ XSSer is a tool that can help you to perform cross site scripting attacks on web
 - Reporting XSS vulnerabilities by generating reports in different formats, such as HTML, XML, JSON, or CSV.<br>
 XSSer is a command-line tool that can be used on any platform that supports Python. It has a powerful detection engine and a wide range of options and features that make it a versatile and effective tool for penetration testing and vulnerability assessment.
 ## XSS with XSSer
-We perform the attack on Mutillidae II. <br>
+We perform the attack on OWASP Mutillidae II. <br>
 ### Goal: Get some payloads to perform XSS (POST). <br>
 Use nmap to scan the network and identify the ports that are running the http and mysql services. The ports must be OPEN.<br>
 1) Start Burp Proxy in interception mode and active FoxyProxy from browser to capture the http request.<br>
