@@ -1,5 +1,5 @@
 # WAPT-XSS-Cross-Site-Scripting-with-XSSer
-Perform XSS attack with XSSer. I show only the important steps required to perform the attack, so i did't explain everything.
+Perform XSS attack with XSSer. I show only the important steps required to perform the attack, so, I didn’t explain everything.
 # Introduction of the tool
 XSSer is a tool that can help you to perform cross site scripting attacks on web-based applications. Cross site scripting (XSS) is a type of attack that allows an attacker to inject malicious code into a web page that is viewed by other users, which can result in stealing cookies, session hijacking, phishing, or defacing websites. XSSer can do various tasks, such as:<br>
 - Detecting XSS vulnerabilities in web applications using different techniques and vectors.<br>
