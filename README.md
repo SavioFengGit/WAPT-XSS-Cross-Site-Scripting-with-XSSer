@@ -25,6 +25,7 @@ Use nmap to scan the network and identify the ports that are running the http an
 <br> <img src="result_xss.png" width=100% height="auto"><br>
 
 You can use your custom script:<b> xsser --url “url with variable XSS as value” --Fp "<script>alert(1)</script>"</b> and open the final attack link to trigger the XSS vulnerability in the browser<br>
+If u need a <b>XSS with auth</b> you can use:<b> xsser --url “url with variable XSS as value” --cookie=”cookie” </b> <br>
 
 #Author
 <b>Xiao Li Savio Feng</b>
