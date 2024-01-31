@@ -186,22 +186,23 @@ xsser [OPTIONS] [--all <url> |-u <url> |-i <file> |-d <dork> (options)|-l ] [-g 
 We perform the attack on OWASP Mutillidae II. <br>
 ### Goal: Get some payloads to perform XSS (POST). <br>
 Use nmap to scan the network and identify the ports that are running the http and mysql services. The ports must be OPEN.<br>
-1) Start Burp Proxy in interception mode and active FoxyProxy from browser to capture the http request.<br>
-2) In the page vulnerable to XSS write something in the form and click search to intercept the request POST.
-3) Replace the value of the parameter that reflects the value entered on the web page with XSS
-4) Run the command:<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value'</b>. 
+1. Start Burp Proxy in interception mode and active FoxyProxy from browser to capture the http request.<br>
+2. In the page vulnerable to XSS write something in the form and click search to intercept the request POST.
+3. Replace the value of the parameter that reflects the value entered on the web page with XSS
+4. Run the command:<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value'</b>. 
 <br> <img src="result_xss2.png" width=100% height="auto"><br>
 
 You can also try use various XSS payloads in auto mode:<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value' --auto</b> or use custom payload<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value' --Fp "<script>alert(1)</script>"</b> and open the final attack link to trigger the XSS vulnerability in the browser
 
 ### Goal: Get some payloads to perform XSS (GET). <br>
 Use nmap to scan the network and identify the ports that are running the http and mysql services. The ports must be OPEN.<br>
-1) In the page vulnerable to XSS select one option in the list and click submit vote to check the url.
-2) Perform the scanning of payloads:<b> xsser --url “url with variable=XSS”</b>
+1. In the page vulnerable to XSS select one option in the list and click submit vote to check the url.
+2. Perform the scanning of payloads:<b> xsser --url “url with variable=XSS”</b>
 <br> <img src="result_xss.png" width=100% height="auto"><br>
 
-You can use your custom script:<b> xsser --url “url with variable=XSS” --Fp "<script>alert(1)</script>"</b> and open the final attack link to trigger the XSS vulnerability in the browser<br>
-If u need a <b>XSS with auth</b> you can use:<b> xsser --url “url with variable=XSS” --cookie=”cookie” </b> <br>
+You can use your custom script:<b> xsser --url “url with variable=XSS” --Fp "<script>alert(1)</script>"</b> and open the final attack link to trigger the XSS vulnerability in the browser<br><br>
+**XSS with auth**<br>
+ - xsser --url “url with variable=XSS” --cookie=”cookie”  <br>
 
 #Author
 <b>Xiao Li Savio Feng</b>
