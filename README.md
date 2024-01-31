@@ -190,7 +190,7 @@ Use nmap to scan the network and identify the ports that are running the http an
 2. In the page vulnerable to XSS write something in the form and click search to intercept the request POST.
 3. Replace the value of the parameter that reflects the value entered on the web page with XSS
 4. Run the command:<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value'</b>. 
-<br> <img src="result_xss2.png" width=100% height="auto"><br>
+<br> <img src="result_xss2.png" width=70% height="auto"><br>
 
 You can also try use various XSS payloads in auto mode:<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value' --auto</b> or use custom payload<b> xsser --url 'referer of the request' -p 'payload of the POST request with XSS value' --Fp "<script>alert(1)</script>"</b> and open the final attack link to trigger the XSS vulnerability in the browser
 
@@ -198,7 +198,7 @@ You can also try use various XSS payloads in auto mode:<b> xsser --url 'referer 
 Use nmap to scan the network and identify the ports that are running the http and mysql services. The ports must be OPEN.<br>
 1. In the page vulnerable to XSS select one option in the list and click submit vote to check the url.
 2. Perform the scanning of payloads:<b> xsser --url “url with variable=XSS”</b>
-<br> <img src="result_xss.png" width=100% height="auto"><br>
+<br> <img src="result_xss.png" width=75% height="auto"><br>
 
 You can use your custom script:<b> xsser --url “url with variable=XSS” --Fp "<script>alert(1)</script>"</b> and open the final attack link to trigger the XSS vulnerability in the browser<br><br>
 **XSS with auth**<br>
